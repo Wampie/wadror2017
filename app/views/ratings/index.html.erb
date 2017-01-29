@@ -1,0 +1,11 @@
+<h2>List of ratings</h2>
+
+Number of ratings: <%= @ratings.size %>
+<ul>
+ <% @ratings.each do |rating| %>
+       <li> <%= rating %> <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %> </li>
+ <% end %>
+
+ </br>
+ Make a new rating: <%= link_to "here", new_rating_path %>
+</ul>
